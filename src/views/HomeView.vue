@@ -1,5 +1,5 @@
 <template>
-<div class="bg-BN_BG_WHITE w-full">
+<div class="bg-BN_BG_WHITE w-full relative pb-64">
     <BN_TopTitle/>
     <BN_Description/>
     <BN_BigDivider text="Some of our work"/>

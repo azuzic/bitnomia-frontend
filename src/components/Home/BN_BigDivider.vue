@@ -1,6 +1,7 @@
 <template>
-    <div class="w-full h-44 flex justify-center items-center bg-BN_BACKGROUND">
-        <div class="font-bold test text-8xl"> {{ text }} </div>
+    <div class="w-full h-44 flex justify-center items-center relative" ref="elementToObserve">
+        <div class="absolute bg-BN_BACKGROUND h-full transition-all duration-1000" :class="entered ? 'w-full' : 'w-[0px]'"></div>
+        <div class="font-bold test text-8xl relative"> {{ text }} </div>
     </div>
 </template>
 
@@ -8,7 +9,29 @@
 export default {
     name: "BN_BigDivider",
     props: { text: String },
-}
+    data() {
+        return {         
+            entered: false
+        }
+    },
+    mounted() {
+        this.$nextTick(() => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.35,
+        };
+
+        const observer = new IntersectionObserver(this.handleIntersect, options);
+        observer.observe(this.$refs.elementToObserve);
+        });
+    },
+    methods: {
+        handleIntersect(entries) {
+        entries.forEach(entry => { this.entered = entry.isIntersecting; })
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
