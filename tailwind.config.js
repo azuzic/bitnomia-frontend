@@ -13,6 +13,7 @@ export default {
         createThemes({
             default: {
                 BN_BACKGROUND: "#16365E",
+                BN_BACKGROUND2: "#12557c",
                 BN_BG_WHITE: "#F8F9FD",
                 BN_FONT_WHITE: "#D9D9D9",
                 BN_FONT: "#3A3B3D",
