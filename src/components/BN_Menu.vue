@@ -7,7 +7,7 @@ import BinomiaLogo from "@/assets/Logos/BitnomiaLogo.svg"
     <div class="sticky top-0 w-full transition-all duration-1000 z-50 overflow-hidden"
     :class="[scrolled ? 'drop-shadow-2xl' : 'drop-shadow-none', loaded2 ? 'h-24 mt-24' : 'h-screen mt-0 pointer-events-none']">
 
-        <div class="fixed top-0 left-0 w-full h-full bbg-BN_BACKGROUND flex justify-center items-center z-[200] text-5xl text-BN_FONT_WHITE font-bold transition-all duration-1000"
+        <div class="fixed top-0 left-0 w-full h-full bg-BN_BACKGROUND flex justify-center items-center z-[200] text-5xl text-BN_FONT_WHITE font-bold transition-all duration-1000"
             :class="loaded3 ? 'opacity-0 pointer-events-none' : 'opacity-100'">
             <svg :class="[loaded2 ? 'left-[156px] -mt-[18px] h-9 drop-shadow-lg' : 'h-20 -mt-[0px] -translate-y-1/2 left-1/2 drop-shadow-2xl', loaded1 ? '' : 'animate-pulse']" class="absolute top-1/2 -translate-x-1/2 transition-all duration-1000" viewBox="0 0 133 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M132.8 40.8C132.8 63.3 114.6 81.5 92.1 81.5H30.6C13.7 81.5 0 67.8 0 50.9C0 34 13.7 20.3 30.6 20.3C30.8 20.3 31.1 20.3 31.3 20.3C31.5 20.3 31.7 20.3 31.9 20.3H32C32.2 20.3 32.3 20.3 32.5 20.3C32.7 20.3 32.8 20.3 33 20.3C33.2 20.3 33.3 20.3 33.5 20.3C34 20.3 34.4 20.4 34.9 20.5C35.1 20.5 35.2 20.5 35.4 20.6C35.5 20.6 35.7 20.6 35.8 20.7C36.1 20.7 36.3 20.8 36.6 20.8C36.8 20.8 36.9 20.9 37.1 20.9C37.2 20.9 37.2 20.9 37.3 20.9C37.4 20.9 37.6 21 37.7 21C38.2 21.1 38.7 21.2 39.2 21.4C39.5 21.5 39.7 21.6 40 21.6C40.1 21.6 40.3 21.7 40.4 21.7C44.8 23.1 49.1 25.3 53.3 28C69.6 38.5 84.9 56.5 99.9 62.3C102.7 63.5 105.9 64.2 109.2 64.2C122.3 64.5 132.8 53.9 132.8 40.8Z" fill="#09B5DA"/>
