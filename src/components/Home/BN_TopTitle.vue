@@ -5,8 +5,8 @@ const globalStore = useGlobalStore()
 </script>
 
 <template>
-    <div class="bg-gradient-to-r from-BN_BACKGROUND via-sky-950 to-indigo-950 h-screen w-full px-32 -mt-48 pt-32 relative transition-all duration-1000"
-        :class="[globalStore.loaded2 ? '-mt-48 ' : '-mt-96', globalStore.loaded3 ? 'overflow-hidden' : '']">
+    <div class="bg-gradient-to-r from-BN_BACKGROUND via-sky-950 to-indigo-950 h-screen w-full px-32 pt-32 relative transition-all duration-1000"
+        :class="[globalStore.loaded2 ? '-mt-[160px] ' : '-mt-[840px]', globalStore.loaded3 ? 'overflow-hidden' : '']">
 
         <img loading="eager" class="absolute -right-32 -top-44 z-0" :src="TopTitleBGElement">
 
@@ -31,8 +31,8 @@ const globalStore = useGlobalStore()
             <span>#<u class="underline">cloud</u></span>
         </div>
 
-        <spline-viewer  loading="eager" class="absolute -bottom-[180px] -right-[640px] scale-50  transition-all duration-1000" url="https://prod.spline.design/cjloRKM5g-U1lcQI/scene.splinecode"
-                :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
+        <!--spline-viewer  loading="eager" class="absolute -bottom-[180px] -right-[640px] scale-50  transition-all duration-1000" url="https://prod.spline.design/cjloRKM5g-U1lcQI/scene.splinecode"
+                :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer-->
     </div>
 </template>
 
@@ -61,9 +61,9 @@ export default {
         });
     },
     methods: {
-        handleIntersect1(entries) { entries.forEach(entry => { this.entered1 = entry.isIntersecting; }) },
-        handleIntersect2(entries) { entries.forEach(entry => { this.entered2 = entry.isIntersecting; }) },
-        handleIntersect3(entries) { entries.forEach(entry => { this.entered3 = entry.isIntersecting; }) },
+        handleIntersect1(entries) { if(!this.entered1) entries.forEach(entry => { this.entered1 = entry.isIntersecting; }) },
+        handleIntersect2(entries) { if(!this.entered2) entries.forEach(entry => { this.entered2 = entry.isIntersecting; }) },
+        handleIntersect3(entries) { if(!this.entered3) entries.forEach(entry => { this.entered3 = entry.isIntersecting; }) },
     },
 };
 </script>

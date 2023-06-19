@@ -11,8 +11,8 @@
                 :class="entered4 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">pipelines.</div>
         </div>
         <div class="grow h-full flex justify-center items-center rounded-full overflow-hidden" ref="elementToObserve1">
-            <spline-viewer loading="eager" class="-mr-48 transition-all duration-1000" url="https://prod.spline.design/SuzxJqULIECQ19cC/scene.splinecode"
-                :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
+            <!--spline-viewer loading="eager" class="-mr-48 transition-all duration-1000" url="https://prod.spline.design/SuzxJqULIECQ19cC/scene.splinecode"
+                :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer-->
         </div>
     </div>
 </template>
@@ -45,10 +45,10 @@ export default {
         });
     },
     methods: {
-        handleIntersect1(entries) { entries.forEach(entry => { this.entered1 = entry.isIntersecting; }) },
-        handleIntersect2(entries) { entries.forEach(entry => { this.entered2 = entry.isIntersecting; }) },
-        handleIntersect3(entries) { entries.forEach(entry => { this.entered3 = entry.isIntersecting; }) },
-        handleIntersect4(entries) { entries.forEach(entry => { this.entered4 = entry.isIntersecting; }) },
+        handleIntersect1(entries) { if(!this.entered1) entries.forEach(entry => { this.entered1 = entry.isIntersecting; }) },
+        handleIntersect2(entries) { if(!this.entered2) entries.forEach(entry => { this.entered2 = entry.isIntersecting; }) },
+        handleIntersect3(entries) { if(!this.entered3) entries.forEach(entry => { this.entered3 = entry.isIntersecting; }) },
+        handleIntersect4(entries) { if(!this.entered4) entries.forEach(entry => { this.entered4 = entry.isIntersecting; }) },
     },
 };
 </script>

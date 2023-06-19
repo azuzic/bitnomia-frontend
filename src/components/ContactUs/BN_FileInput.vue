@@ -5,11 +5,6 @@
             <input type="file" class="w-full h-full p-4 peer cursor-pointer">
             <div class="absolute font-bold text-BN_FONT peer-hover:underline hover:underline cursor-pointer pointer-events-none"><i class="fa-solid fa-paperclip mr-2"></i>Attach files</div>
         </div>
-        
-        <div class="absolute text-BN_FONT peer-focus:-top-8 peer-focus:left-0 peer-focus:text-base transition-all pointer-events-none"
-            :class="value ? '-top-8 left-0 text-base' : 'top-6 left-8 text-2xl'">
-            {{ placeholder }} <b v-if="important">*</b>
-        </div>
     </div>
 </template>
 

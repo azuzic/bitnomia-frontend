@@ -1,12 +1,14 @@
 <script setup>
 import BN_Menu from '@/components/BN_Menu.vue';
 import BN_footer from './components/BN_footer.vue';
+import { useGlobalStore } from '@/stores/globalStore'
+const globalStore = useGlobalStore()
 </script>
 
 <template>
-  <div class="theme-default relative">
+  <div id="app" class="theme-default relative" :class="globalStore.loaded3 ? '' : 'overflow-hidden'">
     <BN_Menu/>
-    <router-view class="h-full"></router-view>
+    <router-view></router-view>
     <BN_footer class="mt-16"/>
   </div>
 </template>

@@ -53,9 +53,9 @@
 
 <script>
 import BN_TextInput from "@/components/ContactUs/BN_TextInput.vue"
-import BN_ButtonInput from "./ContactUs/BN_ButtonInput.vue";
-import BN_AreaInput from "./ContactUs/BN_AreaInput.vue";
-import BN_FileInput from "./ContactUs/BN_FileInput.vue";
+import BN_ButtonInput from "@/components/ContactUs/BN_ButtonInput.vue";
+import BN_AreaInput from "@/components/ContactUs/BN_AreaInput.vue";
+import BN_FileInput from "@/components/ContactUs/BN_FileInput.vue";
 export default {
     name: "BN_ContactUs",
     components: { BN_TextInput, BN_AreaInput, BN_FileInput, BN_ButtonInput },

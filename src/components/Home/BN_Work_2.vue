@@ -85,10 +85,10 @@ export default {
         });
     },
     methods: {
-        handleIntersect(entries) { entries.forEach(entry => { this.entered = entry.isIntersecting; }); },
-        handleIntersect1(entries) { entries.forEach(entry => { this.entered1 = entry.isIntersecting; }); },
-        handleIntersect2(entries) { entries.forEach(entry => { this.entered2 = entry.isIntersecting; }); },
-        handleIntersect3(entries) { entries.forEach(entry => { this.entered3 = entry.isIntersecting; }); },
+        handleIntersect(entries) { if(!this.entered) entries.forEach(entry => { this.entered = entry.isIntersecting; }); },
+        handleIntersect1(entries) { if(!this.entered1) entries.forEach(entry => { this.entered1 = entry.isIntersecting; }); },
+        handleIntersect2(entries) { if(!this.entered2) entries.forEach(entry => { this.entered2 = entry.isIntersecting; }); },
+        handleIntersect3(entries) { if(!this.entered3) entries.forEach(entry => { this.entered3 = entry.isIntersecting; }); },
     }
 };
 </script>

@@ -27,9 +27,7 @@ export default {
         });
     },
     methods: {
-        handleIntersect(entries) {
-        entries.forEach(entry => { this.entered = entry.isIntersecting; })
-        },
+        handleIntersect(entries) { if(!this.entered) entries.forEach(entry => { this.entered = entry.isIntersecting; }) },
     },
 };
 </script>
