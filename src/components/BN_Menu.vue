@@ -41,26 +41,29 @@ export default {
     name: "Menu.vue",
     data() { return {
         scrolled: false,
-        loaded1: false,
-        loaded2: false,
-        loaded3: false
     } },
     setup() {     
         const globalStore = useGlobalStore()
         return { globalStore, TopTitleBGElement, BinomiaLogo }
     },
     mounted() {
+        console.log(1);
         document.documentElement.style.backgroundImage = 'linear-gradient(to right, rgb(22, 54, 94), rgb(8, 47, 73), rgb(30, 27, 75))';
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('load', () => {
+            this.globalStore.loaded0 = true;
+            console.log(2);
             setTimeout(() => {
+                console.log(3);
                 this.globalStore.loaded1 = true;
                 window.scrollTo(0, 0);
             }, 500);
             setTimeout(() => {
+                console.log(4);
                 this.globalStore.loaded2 = true;
             }, 2500);
             setTimeout(() => {
+                console.log(5);
                 this.globalStore.loaded3 = true;
                 document.documentElement.style.overflow = 'auto';
                 document.documentElement.style.backgroundImage = 'none';

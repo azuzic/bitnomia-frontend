@@ -31,8 +31,8 @@ const globalStore = useGlobalStore()
             <span>#<u class="underline">cloud</u></span>
         </div>
 
-        <!--spline-viewer  loading="eager" class="absolute -bottom-[180px] -right-[640px] scale-50  transition-all duration-1000" url="https://prod.spline.design/cjloRKM5g-U1lcQI/scene.splinecode"
-                :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer-->
+        <spline-viewer v-if="globalStore.showSplines" loading="eager" class="absolute -bottom-[180px] -right-[640px] scale-50  transition-all duration-1000" url="https://prod.spline.design/cjloRKM5g-U1lcQI/scene.splinecode"
+                :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
     </div>
 </template>
 

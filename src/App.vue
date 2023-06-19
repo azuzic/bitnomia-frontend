@@ -6,7 +6,7 @@ const globalStore = useGlobalStore()
 </script>
 
 <template>
-  <div id="app" class="theme-default relative" :class="globalStore.loaded3 ? '' : 'overflow-hidden'">
+  <div class="theme-default h-full" :class="globalStore.loaded3 ? '' : 'overflow-hidden'">
     <BN_Menu/>
     <router-view></router-view>
     <BN_footer class="mt-16"/>

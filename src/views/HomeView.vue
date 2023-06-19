@@ -8,7 +8,7 @@ import BN_Work_2 from '@/components/Home/BN_Work_2.vue';
 import BN_ContactUs from '@/components/BN_ContactUs.vue';
 </script>
 <template>
-<div class="bg-BN_BG_WHITE w-full relative">
+<div class="bg-BN_BG_WHITE relative">
     <BN_TopTitle/>
     <BN_Description/>
     <BN_BigDivider text="Some of our work"/>

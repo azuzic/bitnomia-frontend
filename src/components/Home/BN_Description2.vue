@@ -1,3 +1,7 @@
+<script setup>
+import { useGlobalStore } from '@/stores/globalStore'
+const globalStore = useGlobalStore()
+</script>
 <template>
     <div class="mt-32 w-full h-96 pl-32 flex justify-between items-center pr-32">
         <div class="text-6xl pl-1">
@@ -11,8 +15,8 @@
                 :class="entered4 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">pipelines.</div>
         </div>
         <div class="grow h-full flex justify-center items-center rounded-full overflow-hidden" ref="elementToObserve1">
-            <!--spline-viewer loading="eager" class="-mr-48 transition-all duration-1000" url="https://prod.spline.design/SuzxJqULIECQ19cC/scene.splinecode"
-                :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer-->
+            <spline-viewer v-if="globalStore.showSplines" loading="eager" class="-mr-48 transition-all duration-1000" url="https://prod.spline.design/SuzxJqULIECQ19cC/scene.splinecode"
+                :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
         </div>
     </div>
 </template>
