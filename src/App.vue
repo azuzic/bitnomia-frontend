@@ -7,7 +7,7 @@ import BN_footer from './components/BN_footer.vue';
   <div class="theme-default relative">
     <BN_Menu/>
     <router-view class="h-full"></router-view>
-    <BN_footer/>
+    <BN_footer class="mt-16"/>
   </div>
 </template>
 

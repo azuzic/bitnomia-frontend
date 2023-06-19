@@ -1,6 +1,6 @@
 <template>
     <div class="mt-32 w-full h-96 pl-32 flex justify-between items-center pr-32">
-        <div class="text-7xl pl-1">
+        <div class="text-6xl pl-1">
             <div class="text-BN_FONT_BOLD py-2 whitespace-nowrap transition-all duration-1000"
                 :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">We specialize in</div>
             <div class="test font-bold py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve2"

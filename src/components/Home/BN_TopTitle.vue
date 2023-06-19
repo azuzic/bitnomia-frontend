@@ -1,9 +1,12 @@
 <script setup>
+import { useGlobalStore } from '@/stores/globalStore'
 import TopTitleBGElement from "@/assets/Logos/BGelements/TopTitleBGElement.svg"
+const globalStore = useGlobalStore()
 </script>
 
 <template>
-    <div class="bg-gradient-to-r from-BN_BACKGROUND via-sky-950 to-indigo-950 h-screen w-full px-32 -mt-48 pt-32 relative overflow-hidden">
+    <div class="bg-gradient-to-r from-BN_BACKGROUND via-sky-950 to-indigo-950 h-screen w-full px-32 -mt-48 pt-32 relative transition-all duration-1000"
+        :class="[globalStore.loaded2 ? '-mt-48 ' : '-mt-96', globalStore.loaded3 ? 'overflow-hidden' : '']">
 
         <img loading="eager" class="absolute -right-32 -top-44 z-0" :src="TopTitleBGElement">
 
