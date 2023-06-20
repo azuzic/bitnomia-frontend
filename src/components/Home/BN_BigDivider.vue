@@ -1,7 +1,11 @@
+<script setup>
+import { useGlobalStore } from '@/stores/globalStore'
+const globalStore = useGlobalStore()
+</script>
 <template>
-    <div class="w-full h-36 flex justify-center items-center relative" ref="elementToObserve">
-        <div class="absolute bg-gradient-to-r from-BN_BACKGROUND via-sky-950 to-indigo-950 h-full transition-all duration-1000" :class="entered ? 'w-full' : 'w-[0px]'"></div>
-        <div class="font-bold test text-7xl py-2 relative"> {{ text }} </div>
+    <div class="w-full flex justify-center text-center items-center relative" ref="elementToObserve">
+        <div class="absolute bg-gradient-to-r from-BN_BACKGROUND via-sky-950 to-indigo-950 h-full transition-all duration-1000" :class="entered && globalStore.loaded3 ? 'w-full' : 'w-[0px]'"></div>
+        <div class="font-bold test text-3xl sm:text-7xl py-5 sm:py-6 relative"> {{ text }} </div>
     </div>
 </template>
 

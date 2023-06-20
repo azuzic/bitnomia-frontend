@@ -1,48 +1,48 @@
 <template>
     <div class="relative w-full h-fit flex justify-end">
-        <div class="w-10/12 flex flex-col justify-between rounded-l-3xl relative overflow-hidden bg-gradient-to-b from-amber-200 via-orange-300 to-rose-400">
+        <div class="w-full sm:w-10/12 flex flex-col justify-between sm:rounded-l-3xl relative overflow-hidden bg-gradient-to-b from-amber-200 via-orange-300 to-rose-400">
 
-            <div class="w-full flex p-8">
-                <div class="flex justify-center items-center">
+            <div class="w-full flex p-4 sm:p-8">
+                <div class="hidden sm:flex justify-center items-center">
                     <img loading="eager" class="w-10/12 transition-all duration-1000" src="https://talenttechlabs.com/wp-content/uploads/2021/01/advisory-understand-the-need.png" alt="" ref="elementToObserve1"
                     :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
                 </div>
-                <div class="w-full flex flex-col justify-between gap-8">
-                    <div class="w-full flex flex-col gap-8">
-                        <div class="text-4xl font-bold text-amber-950 underline underline-offset-[6px] transition-all duration-1000 text-right"
-                            :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">Market selection tool</div>
+                <div class="w-full flex flex-col justify-between gap-6 sm:gap-8">
+                    <div class="w-full flex flex-col gap-6 sm:gap-8">
+                        <div class="text-2xl text-center sm:text-right sm:text-4xl font-bold text-amber-950 underline underline-offset-[6px] transition-all duration-1000"
+                            :class="entered1 ? 'translate-y-0 opacity-100' : 'sm:translate-y-16 sm:opacity-25'">Market selection tool</div>
 
-                        <div class="flex flex-col w-full pl-16 text-right">
-                            <div class="flex flex-col text-lg gap-8 text-orange-950">
+                        <div class="flex flex-col w-full text-center sm:text-right sm:pl-16">
+                            <div class="flex flex-col text-base sm:text-lg gap-4 sm:gap-8 text-orange-950">
                                 <div class="transition-all duration-1000"
-                                    :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
+                                    :class="entered1 ? 'translate-y-0 opacity-100' : 'sm:translate-y-16 sm:opacity-25'">
                                     Transform your digital campaigns with our powerful market <b>clustering tool</b>.
                                 </div>
                                 <div class="transition-all duration-1000" ref="elementToObserve2"
-                                    :class="entered2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
+                                    :class="entered2 ? 'translate-y-0 opacity-100' : 'sm:translate-y-16 sm:opacity-25'">
                                     Clustering algorithms apply a mix of <b>time-series</b>, <b>transactional</b> and classical <b>meta-data</b>.
                                 </div>
                                 <div class="transition-all duration-1000" ref="elementToObserve3"
-                                    :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
+                                    :class="entered3 ? 'translate-y-0 opacity-100' : 'sm:translate-y-16 sm:opacity-25'">
                                     <b>Statistical balancing</b> ensures an easy-to-read <b>lift measurement</b>, making our tool the perfect choice for digital campaigns. 
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="font-bold text-2xl text-rose-950 transition-all duration-1000  text-right"
+                    <div class="font-bold text-xl sm:text-2xl text-center sm:text-right text-rose-950 transition-all duration-1000"
                             :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
                         Technologies applied:
                     </div>
                 </div>            
             </div>     
 
-            <div class="relative flex flex-row justify-between items-center w-full gap-8 pr-8 py-2 text-BN_FONT_WHITE bg-gradient-to-r from-amber-900 via-orange-900 to-rose-900" ref="elementToObserve">     
-                <div class="h-full flex flex-col justify-center items-start ml-16 gap-4 text-lg -mt-4">
+            <div class="relative flex flex-row justify-between items-center w-full gap-8 sm:pr-8 py-2 text-BN_FONT_WHITE bg-gradient-to-r from-amber-900 via-orange-900 to-rose-900" ref="elementToObserve">     
+                <div class="h-full hidden sm:flex flex-col justify-center items-start ml-16 gap-4 text-lg -mt-4">
                     <div class="">Domain: <span class="text-orange-300">Marketing</span> </div>
                     <div class="">Client: <span class="text-orange-300">Fortune 500 enterprise</span></div>
                 </div>
-                <div class="relative flex flex-row-reverse h-full gap-8">
+                <div class="relative flex overflow-x-scroll sm:justify-end justify-start sm:flex-nowrap sm:flex-row-reverse h-full gap-2 sm:gap-8 scrollbar-thumb-rose-950 scrollbar sm:scrollbar-none scrollbar-h-1.5 scrollbar-thumb-rounded-full mx-4 sm:mx-0 pb-2 sm:pb-0">
                     <BN_TechnologyIcon name="Clustering <br> Algorithms" imgClass="p-0" src="https://cdn.getmidnight.com/171293841d3fdd4af2e12426ce202ac9/2022/09/dsfmlogo-1.png" :entered="entered" class="hover:bg-rose-950"/>
                     <BN_TechnologyIcon name="Amazon <br> Web Service" imgClass="p-4 invert" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png" :entered="entered" class="hover:bg-rose-950"/>
                     <BN_TechnologyIcon name="Apache <br> Spark" imgClass="p-3 invert" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Apache_Spark_logo.svg/2560px-Apache_Spark_logo.svg.png" :entered="entered" class="hover:bg-rose-950"/>

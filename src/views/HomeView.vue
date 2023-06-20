@@ -13,10 +13,9 @@ import BN_ContactUs from '@/components/BN_ContactUs.vue';
     <BN_Description/>
     <BN_BigDivider text="Some of our work"/>
     <BN_Description2/>
-    <BN_Work_1 class="mt-16"/>
+    <BN_Work_1 class="mt-8 sm:mt-32"/>
     <BN_Work_2 class="mt-16"/>
-    <div class="mt-16"></div>
-    <BN_BigDivider text="Got a challenge for us?" id="contact"/>
+    <BN_BigDivider class="mt-16" text="Got a challenge for us?" id="contact"/>
     <BN_ContactUs/>
 </div>
 </template>

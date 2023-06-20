@@ -5,34 +5,34 @@ const globalStore = useGlobalStore()
 </script>
 
 <template>
-    <div class="bg-gradient-to-r from-BN_BACKGROUND via-sky-950 to-indigo-950 h-screen w-full px-32 pt-32 relative transition-all duration-1000"
-        :class="[globalStore.loaded2 ? '-mt-[160px] ' : '-mt-[840px]', globalStore.loaded3 ? 'overflow-hidden' : '']">
+    <div class="bg-gradient-to-r from-BN_BACKGROUND via-sky-950 to-indigo-950 h-fit sm:h-screen w-full px-4 sm:px-32 pt-44 sm:pt-32 relative transition-all duration-1000"
+        :class="[globalStore.loaded2 ? '-mt-[160px] ' : '-mt-[840px]', globalStore.loaded3 ? 'overflow-hidden' : 'overflow-hidden sm:overflow-visible']">
 
-        <img loading="eager" class="absolute -right-32 -top-44 z-0" :src="TopTitleBGElement">
+        <img loading="eager" class="absolute -right-36 top-8 sm:-right-32 sm:-top-44 z-0 w-72 sm:w-auto" :src="TopTitleBGElement">
 
-        <div class="text-BN_FONT_WHITE text-6xl font-bold leading-tight my-32 relative  transition-all duration-1000" ref="elementToObserve1"
-                :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
+        <div class="text-BN_FONT_WHITE  sm:text-left sm:text-6xl font-bold my-4 leading-6 sm:leading-normal sm:my-32 relative transition-all duration-1000" ref="elementToObserve1"
+                :class="entered1 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
             A team of battle-tested experts <br>
             to help you deliver value <br>
             by extracting insights <br>
             from your data.
         </div>
 
-        <div class="text-BN_FONT_WHITE text-3xl leading-tight relative  transition-all duration-1000" ref="elementToObserve2"
-                :class="entered2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
+        <div class="text-BN_FONT_WHITE text-lg sm:text-3xl leading-tight relative transition-all duration-1000" ref="elementToObserve2"
+                :class="entered2 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
             Delivering value since <b>2017</b>
         </div>
 
-        <div class="text-BN_PRIMARY font-bold leading-tight gap-4 flex mt-8 relative transition-all duration-1000" ref="elementToObserve3"
-                :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">
+        <div class="text-BN_PRIMARY font-bold leading-tight pr-32 sm:pr-0 gap-2 mb-4 sm:mb-0 sm:gap-4 flex flex-wrap mt-2 sm:mt-8 text-xs sm:text-base relative transition-all duration-1000" ref="elementToObserve3"
+                :class="entered3 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-0 sm:translate-y-16 opacity-25'">
             <span>#<u class="underline">machine-learning</u> </span>
             <span>#<u class="underline">big-data</u></span>
             <span>#<u class="underline">artificial-intelligence</u></span>
             <span>#<u class="underline">cloud</u></span>
         </div>
 
-        <spline-viewer v-if="globalStore.showSplines" loading="eager" class="absolute -bottom-[180px] -right-[640px] scale-50  transition-all duration-1000" url="https://prod.spline.design/cjloRKM5g-U1lcQI/scene.splinecode"
-                :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
+        <spline-viewer v-if="globalStore.showSplines" loading="eager" class="hidden sm:block absolute -bottom-[412px] sm:-bottom-[180px] h-[950px] w-[950px] sm:h-full sm:w-full -right-[410px] sm:-right-[640px] scale-[15%] sm:scale-50 transition-all duration-1000" url="https://prod.spline.design/cjloRKM5g-U1lcQI/scene.splinecode"
+                :class="entered3 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
     </div>
 </template>
 

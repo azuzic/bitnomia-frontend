@@ -3,20 +3,20 @@ import { useGlobalStore } from '@/stores/globalStore'
 const globalStore = useGlobalStore()
 </script>
 <template>
-    <div class="mt-32 w-full h-96 pl-32 flex justify-between items-center pr-32">
-        <div class="text-6xl pl-1">
-            <div class="text-BN_FONT_BOLD py-2 whitespace-nowrap transition-all duration-1000"
-                :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">We specialize in</div>
-            <div class="test font-bold py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve2"
-                :class="entered2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">big-data</div>
-            <div class="test font-bold py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve3"
-                :class="entered3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">machine-learning</div>
-            <div class="text-BN_FONT_BOLD py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve4"
-                :class="entered4 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">pipelines.</div>
+    <div class="mt-6 sm:mt-32 w-full h-fit sm:h-96 sm:pl-32 flex justify-center sm:justify-between items-center sm:pr-32">
+        <div class="text-3xl sm:text-6xl sm:pl-1 text-center sm:text-left w-full sm:w-auto">
+            <div class="text-BN_FONT_BOLD py-1 sm:py-2 whitespace-nowrap transition-all duration-1000"
+                :class="entered1 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">We specialize in</div>
+            <div class="test font-bold py-1 sm:py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve2"
+                :class="entered2 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">big-data</div>
+            <div class="test font-bold py-1 sm:py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve3"
+                :class="entered3 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">machine-learning</div>
+            <div class="text-BN_FONT_BOLD py-1 sm:py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve4"
+                :class="entered4 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">pipelines.</div>
         </div>
-        <div class="grow h-full flex justify-center items-center rounded-full overflow-hidden" ref="elementToObserve1">
+        <div class="grow h-full hidden sm:flex justify-center items-center rounded-full overflow-hidden" ref="elementToObserve1">
             <spline-viewer v-if="globalStore.showSplines" loading="eager" class="-mr-48 transition-all duration-1000" url="https://prod.spline.design/SuzxJqULIECQ19cC/scene.splinecode"
-                :class="entered1 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
+                :class="entered1 && globalStore.loaded3 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
         </div>
     </div>
 </template>

@@ -22,5 +22,6 @@ export default {
                 BN_PRIMARY: "#0EB5D9",
             },
         }),
+        require('tailwind-scrollbar')({ nocompatible: true }),
     ],
 };

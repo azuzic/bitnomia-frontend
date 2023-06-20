@@ -1,6 +1,6 @@
 <template>
-    <div class="relative pr-28">
-        <div class="w-1/2 h-16 focus:border-BN_PRIMARY border-dashed hover:border-BN_BACKGROUND2 border-BN_BACKGROUND border-4 rounded-xl 
+    <div class="relative">
+        <div class="w-full h-12 sm:h-16 text-sm sm:text-lg focus:border-BN_PRIMARY border-dashed hover:border-BN_BACKGROUND2 border-BN_BACKGROUND border-4 rounded-xl 
             transition-all relative flex justify-center items-center">
             <input type="file" class="w-full h-full p-4 peer cursor-pointer">
             <div class="absolute font-bold text-BN_FONT peer-hover:underline hover:underline cursor-pointer pointer-events-none"><i class="fa-solid fa-paperclip mr-2"></i>Attach files</div>
