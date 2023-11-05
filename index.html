@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./BitnomiaIcon.svg" />
-    <link rel="shortcut icon" type="image/svg+xml"  href="./BitnomiaIcon.svg" />
-    <link rel="apple-touch-icon" type="image/svg+xml" href="./BitnomiaIcon.svg" />
-    <link rel="apple-touch-icon" type="image/svg+xml" sizes="72x72" href="./BitnomiaIcon.svg" />
-    <link rel="apple-touch-icon" type="image/svg+xml" sizes="114x114" href="./BitnomiaIcon.svg" />
-    <link rel="apple-touch-icon" type="image/svg+xml" sizes="144x144" href="./BitnomiaIcon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bitnomia</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.330/build/spline-viewer.js"></script>
-    <script src="https://kit.fontawesome.com/dd2c5124db.js" crossorigin="anonymous"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="./BitnomiaIcon.svg" />
+		<link rel="shortcut icon" type="image/svg+xml" href="./BitnomiaIcon.svg" />
+		<link rel="apple-touch-icon" type="image/svg+xml" href="./BitnomiaIcon.svg" />
+		<link rel="apple-touch-icon" type="image/svg+xml" sizes="72x72" href="./BitnomiaIcon.svg" />
+		<link rel="apple-touch-icon" type="image/svg+xml" sizes="114x114" href="./BitnomiaIcon.svg" />
+		<link rel="apple-touch-icon" type="image/svg+xml" sizes="144x144" href="./BitnomiaIcon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bitnomia</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script type="module" src="/src/main.js"></script>
+		<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.330/build/spline-viewer.js"></script>
+		<script src="https://kit.fontawesome.com/dd2c5124db.js" crossorigin="anonymous"></script>
+	</body>
 </html>
 
-
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
-* {
-    font-family: 'Montserrat', sans-serif;
-}
-html, body, #app {
-    height: 100%;
-}
+	@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+	* {
+		font-family: "Montserrat", sans-serif;
+	}
+	html,
+	body,
+	#app {
+		height: 100%;
+	}
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	html body::-webkit-scrollbar-track {
+		background: #16365e;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #0eb5d9;
+		border-radius: 4px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #32c9eb;
+	}
+	::-webkit-scrollbar-corner {
+		background: #00000000;
+	}
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		transition: all 0s 50000s;
+	}
 </style>
