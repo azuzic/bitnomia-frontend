@@ -1,7 +1,7 @@
 <template>
 	<div class="relative w-full px-4 pt-16 flex justify-center">
 		<div class="grow max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl transition-all duration-300">
-			<div class="text-2xl font-bold text-BN_FONT pb-8">About you</div>
+			<div class="text-2xl font-bold text-BN_FONT">About you</div>
 
 			<Form @submit="onSubmit" :validation-schema="schema">
 				<div class="w-full flex flex-col gap-6 sm:gap-8 mt-4">
