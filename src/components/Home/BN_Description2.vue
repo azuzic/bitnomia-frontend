@@ -3,14 +3,14 @@ import { useGlobalStore } from "@/stores/globalStore";
 const globalStore = useGlobalStore();
 </script>
 <template>
-	<div class="mt-6 sm:mt-16 md:mt-24 lg:mt-28 xl:mt-32 w-full h-fit sm:h-96 px-8 md:px-12 lg:px-16 xl:px-32 flex justify-center lg:justify-between items-center transition-all duration-500">
-		<div class="text-3xl sm:text-6xl sm:pl-1 text-center lg:text-left w-full sm:w-auto">
+	<div class="relative mt-6 sm:mt-8 lg:mt-28 xl:mt-32 w-full h-fit sm:h-96 px-8 md:px-12 lg:px-16 xl:px-32 flex justify-center lg:justify-between items-center transition-all duration-500">
+		<div class="text-3xl sm:text-5xl lg:text-6xl sm:pl-1 text-center lg:text-left w-full sm:w-auto">
 			<div class="text-BN_FONT_BOLD py-1 sm:py-2 whitespace-nowrap transition-all duration-1000" :class="entered1 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">We specialize in</div>
 			<div class="test font-bold py-1 sm:py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve2" :class="entered2 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">big-data</div>
 			<div class="test font-bold py-1 sm:py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve3" :class="entered3 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">machine-learning</div>
 			<div class="text-BN_FONT_BOLD py-1 sm:py-2 whitespace-nowrap transition-all duration-1000" ref="elementToObserve4" :class="entered4 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'">pipelines.</div>
 		</div>
-		<div class="grow h-full hidden lg:flex justify-center items-center rounded-full overflow-hidden" ref="elementToObserve1">
+		<div class="absolute -right-32 xl:right-0 transition-all duration-500 grow h-full hidden lg:flex justify-center items-center rounded-full min-w-[850px] overflow-hidden" ref="elementToObserve1">
 			<spline-viewer
 				v-if="globalStore.showSplines"
 				loading="eager"

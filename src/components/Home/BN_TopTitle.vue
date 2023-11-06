@@ -37,12 +37,15 @@ const globalStore = useGlobalStore();
 			<span>#<u class="underline">cloud</u></span>
 		</div>
 
-		<spline-viewer
-			v-if="globalStore.showSplines"
-			loading="eager"
-			class="hidden sm:block absolute -bottom-[412px] sm:-bottom-[180px] h-[950px] w-[950px] sm:h-full sm:w-full -right-[810px] xl:-right-1/3 scale-[15%] sm:scale-50 transition-all duration-1000"
-			url="https://prod.spline.design/cjloRKM5g-U1lcQI/scene.splinecode"
-			:class="entered3 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
+		<div
+			class="absolute -bottom-[280px] sm:-bottom-[220px] md:-bottom-[180px] lg:-bottom-[160px] xl:-bottom-[120px] -right-64 sm:-right-40 md:-right-24 lg:-right-12 xl:-right-0 flex justify-start items-start aspect-square h-[700px] rounded-full overflow-hidden scale-[25%] sm:scale-[50%] md:scale-[65%] lg:scale-75 xl:scale-100 transition-all duration-500">
+			<spline-viewer
+				v-if="globalStore.showSplines"
+				loading="eager"
+				class="absolute -bottom-32 block h-[950px] w-[950px] scale-50"
+				url="https://prod.spline.design/cjloRKM5g-U1lcQI/scene.splinecode"
+				:class="entered3 && globalStore.loaded2 ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-25'"></spline-viewer>
+		</div>
 	</div>
 </template>
 

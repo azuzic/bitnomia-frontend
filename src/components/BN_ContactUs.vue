@@ -35,7 +35,14 @@
 					<i class="fa-solid fa-paper-plane ml-2 text-BN_PRIMARY group-hover:text-BN_FONT_WHITE group-hover:ml-4 transition-all duration-500"></i>
 				</button>
 
-				<img class="absolute | animate-spin_slow transition-all duration-500" :src="macroquiet_logo_icon" :class="submitting ? 'h-16 opacity-100 delay-500' : 'h-0 opacity-0 delay-0'" />
+				<div class="relative flex justify-center items-center w-full">
+					<svg :class="submitting ? 'h-16 delay-500' : 'delay-0 h-0'" class="absolute | bottom-0 animate-pulse w-32 transition-all duration-500" viewBox="0 0 133 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M132.8 40.8C132.8 63.3 114.6 81.5 92.1 81.5H30.6C13.7 81.5 0 67.8 0 50.9C0 34 13.7 20.3 30.6 20.3C30.8 20.3 31.1 20.3 31.3 20.3C31.5 20.3 31.7 20.3 31.9 20.3H32C32.2 20.3 32.3 20.3 32.5 20.3C32.7 20.3 32.8 20.3 33 20.3C33.2 20.3 33.3 20.3 33.5 20.3C34 20.3 34.4 20.4 34.9 20.5C35.1 20.5 35.2 20.5 35.4 20.6C35.5 20.6 35.7 20.6 35.8 20.7C36.1 20.7 36.3 20.8 36.6 20.8C36.8 20.8 36.9 20.9 37.1 20.9C37.2 20.9 37.2 20.9 37.3 20.9C37.4 20.9 37.6 21 37.7 21C38.2 21.1 38.7 21.2 39.2 21.4C39.5 21.5 39.7 21.6 40 21.6C40.1 21.6 40.3 21.7 40.4 21.7C44.8 23.1 49.1 25.3 53.3 28C69.6 38.5 84.9 56.5 99.9 62.3C102.7 63.5 105.9 64.2 109.2 64.2C122.3 64.5 132.8 53.9 132.8 40.8Z"
+							fill="#09B5DA" />
+						<path d="M132.8 40.8C132.8 53.8 122.2 64.4 109.2 64.4C106.1 64.4 103 63.7 99.9 62.5C84.9 56.7 69.7 38.7 53.3 28.2C58.6 11.9 73.9 0 92 0C114.6 0.1 132.8 18.3 132.8 40.8Z" fill="#0096C5" />
+					</svg>
+				</div>
 
 				<BN_alert :show="type == 'warning'" color="rgb(220, 38, 68)" icon="fa-solid fa-triangle-exclamation" class="absolute -mt-12">
 					<b>Error sending message!</b> <br />
@@ -96,7 +103,7 @@ export default {
 	},
 	data() {
 		return {
-			list: ["Up to 50.000$", "50-100.00$", "100-250.00$", "Over 250.00$", "Can't disclose"],
+			list: ["Up to 50,000$", "50-100,000$", "100-250,000$", "Over 250,000$", "Can't disclose"],
 			submitting: false,
 			type: "none",
 		};
@@ -123,12 +130,16 @@ export default {
 					this.submitting = false;
 					this.type = "success";
 					await wait(4);
+					this.type = "wait";
+					await wait(1);
 					this.type = "none";
 				} catch (e) {
 					await wait(2);
 					this.submitting = false;
 					this.type = "warning";
 					await wait(4);
+					this.type = "wait";
+					await wait(1);
 					this.type = "none";
 					console.error("Error sending message!");
 				}

@@ -24,7 +24,7 @@
 					loading="eager"
 					class="absolute top-8 sm:-top-44 -mt-24 z-10 w-72 sm:w-auto transition-all duration-1000"
 					:src="TopTitleBGElement"
-					:class="[scrolled ? '-right-9 sm:right-0' : '', globalStore.loaded3 ? 'opacity-100 -right-36 sm:-right-32' : 'opacity-0 -right-[680px]']" />
+					:class="[scrolled ? '-right-9 sm:-right-4' : '', globalStore.loaded3 ? 'opacity-100 -right-36 sm:-right-32' : 'opacity-0 -right-[680px]']" />
 
 				<button
 					@click="scroll('contact')"
